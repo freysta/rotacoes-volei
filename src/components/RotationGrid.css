@@ -1,0 +1,21 @@
+.rotation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  .rotation-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .rotation-grid {
+    grid-template-columns: 1fr;
+  }
+}
