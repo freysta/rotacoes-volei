@@ -1,44 +1,55 @@
-.player-form-container {
+.player-form-list {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
+  width: 100%;
 }
 
-.input-group {
+.player-input-card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-}
-
-.input-group label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.input-group input {
-  padding: 0.8rem 1rem;
-  background: transparent;
+  background: rgba(0,0,0,0.2);
   border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.player-input-card:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+  background: rgba(255, 214, 0, 0.03);
+}
+
+.player-input-card input {
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   color: var(--text-main);
   font-size: 0.95rem;
-  transition: all 0.2s ease;
   outline: none;
+  font-weight: 700;
 }
 
-.input-group input:hover {
-  border-color: #555;
+.player-input-card select {
+  padding: 0.8rem 1rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
-.input-group input:focus {
-  border-color: var(--text-main);
+.player-input-card select:focus {
+  color: var(--accent);
 }
 
-/* Monochromatic subtle borders instead of colors */
-.input-role-levantador { border-left: 2px solid var(--color-levantador) !important; }
-.input-role-oposto { border-left: 2px solid var(--color-oposto) !important; }
-.input-role-ponteiro-1, .input-role-ponteiro-2 { border-left: 2px solid var(--color-ponteiro) !important; }
-.input-role-central-1, .input-role-central-2 { border-left: 2px solid var(--color-central) !important; }
-.input-role-libero { border-left: 2px solid var(--color-libero) !important; }
+.player-input-card select option {
+  background: var(--panel-bg);
+  color: var(--text-main);
+}

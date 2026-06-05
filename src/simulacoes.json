@@ -1,0 +1,62 @@
+[
+  {
+    "nome": "Opção 1",
+    "jogadores": [
+      { "id": "Levantador", "role": "Levantador", "name": "Jhoyan - Alexandre" },
+      { "id": "Oposto", "role": "Oposto", "name": "Hyago" },
+      { "id": "Ponteiro 1", "role": "Ponteiro 1", "name": "Pedro" },
+      { "id": "Ponteiro 2", "role": "Ponteiro 2", "name": "Ilamark" },
+      { "id": "Central 1", "role": "Central 1", "name": "Lucena" },
+      { "id": "Central 2", "role": "Central 2", "name": "Joaquim" },
+      { "id": "Líbero", "role": "Líbero", "name": "" }
+    ]
+  },
+  {
+    "nome": "Opção 2",
+    "jogadores": [
+      { "id": "Levantador", "role": "Levantador", "name": "Jhoyan - Alexandre" },
+      { "id": "Oposto", "role": "Oposto", "name": "Hyago" },
+      { "id": "Ponteiro 1", "role": "Ponteiro 1", "name": "Pedro" },
+      { "id": "Ponteiro 2", "role": "Ponteiro 2", "name": "Ilamark" },
+      { "id": "Central 1", "role": "Central 1", "name": "Jhoyan - Alexandre" },
+      { "id": "Central 2", "role": "Central 2", "name": "Joaquim" },
+      { "id": "Líbero", "role": "Líbero", "name": "" }
+    ]
+  },
+  {
+    "nome": "Opção 3",
+    "jogadores": [
+      { "id": "Levantador", "role": "Levantador", "name": "Jhoyan - Alexandre" },
+      { "id": "Oposto", "role": "Oposto", "name": "Hyago" },
+      { "id": "Ponteiro 1", "role": "Ponteiro 1", "name": "Pedro" },
+      { "id": "Ponteiro 2", "role": "Ponteiro 2", "name": "Ilamark" },
+      { "id": "Central 1", "role": "Central 1", "name": "David" },
+      { "id": "Central 2", "role": "Central 2", "name": "Joaquim" },
+      { "id": "Líbero", "role": "Líbero", "name": "" }
+    ]
+  },
+  {
+    "nome": "Opção 4",
+    "jogadores": [
+      { "id": "Levantador", "role": "Levantador", "name": "Jhoyan - Alexandre" },
+      { "id": "Oposto", "role": "Oposto", "name": "Hyago" },
+      { "id": "Ponteiro 1", "role": "Ponteiro 1", "name": "Diogo" },
+      { "id": "Ponteiro 2", "role": "Ponteiro 2", "name": "Ilamark" },
+      { "id": "Central 1", "role": "Central 1", "name": "Pedro" },
+      { "id": "Central 2", "role": "Central 2", "name": "Joaquim" },
+      { "id": "Líbero", "role": "Líbero", "name": "" }
+    ]
+  },
+  {
+    "nome": "Opção 5",
+    "jogadores": [
+      { "id": "Levantador", "role": "Levantador", "name": "Pedro" },
+      { "id": "Oposto", "role": "Oposto", "name": "Hyago" },
+      { "id": "Ponteiro 1", "role": "Ponteiro 1", "name": "Diogo" },
+      { "id": "Ponteiro 2", "role": "Ponteiro 2", "name": "Ilamark" },
+      { "id": "Central 1", "role": "Central 1", "name": "Lucena" },
+      { "id": "Central 2", "role": "Central 2", "name": "Joaquim" },
+      { "id": "Líbero", "role": "Líbero", "name": "" }
+    ]
+  }
+]

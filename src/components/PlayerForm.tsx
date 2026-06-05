@@ -1,13 +1,12 @@
-
 import type { Player, Role } from '../types';
 import './PlayerForm.css';
 
 interface PlayerFormProps {
   players: Player[];
-  onPlayerChange: (role: Role, newName: string) => void;
+  onPlayerUpdate: (index: number, updatedPlayer: Player) => void;
 }
 
-const ROLES_ORDER: Role[] = [
+const ALL_ROLES: Role[] = [
   'Levantador',
   'Oposto',
   'Ponteiro 1',
@@ -17,30 +16,25 @@ const ROLES_ORDER: Role[] = [
   'Líbero'
 ];
 
-// Helper para converter Role para classe CSS válida
-const getRoleClass = (role: string) => {
-  return role.toLowerCase().replace(' ', '-').replace('í', 'i');
-};
-
-export const PlayerForm: React.FC<PlayerFormProps> = ({ players, onPlayerChange }) => {
+export const PlayerForm: React.FC<PlayerFormProps> = ({ players, onPlayerUpdate }) => {
   return (
-    <div className="player-form-container">
-      {ROLES_ORDER.map((role) => {
-        const player = players.find(p => p.role === role);
-        return (
-          <div key={role} className="input-group">
-            <label htmlFor={`input-${role}`}>{role}</label>
-            <input
-              id={`input-${role}`}
-              type="text"
-              value={player?.name || ''}
-              onChange={(e) => onPlayerChange(role, e.target.value)}
-              placeholder={`Nome do atleta`}
-              className={`input-role-${getRoleClass(role)}`}
-            />
-          </div>
-        );
-      })}
+    <div className="player-form-grid">
+      {players.map((player, index) => (
+        <div key={`player-${index}`} className="player-input-card">
+          <input
+            type="text"
+            value={player.name}
+            onChange={(e) => onPlayerUpdate(index, { ...player, name: e.target.value })}
+            placeholder={`Atleta ${index + 1}`}
+          />
+          <select 
+            value={player.role}
+            onChange={(e) => onPlayerUpdate(index, { ...player, role: e.target.value as Role, id: e.target.value as Role })}
+          >
+            {ALL_ROLES.map(r => <option key={r} value={r}>{r}</option>)}
+          </select>
+        </div>
+      ))}
     </div>
   );
 };

@@ -1,90 +1,163 @@
 .app-container {
   display: flex;
-  min-height: 100vh;
-}
-
-.sidebar {
-  width: 340px;
-  background-color: var(--panel-bg);
-  border-right: 1px solid var(--border-color);
-  padding: 2.5rem;
-  display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  z-index: 10;
+  height: 100vh;
+  background-color: var(--bg-color);
+  background: radial-gradient(circle at 50% 0%, #15336b 0%, var(--bg-color) 70%);
 }
 
-.sidebar h2 {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.top-toolbar {
+  width: 100%;
+  height: 70px;
+  background: rgba(10, 31, 68, 0.6);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+}
+
+.header-title {
+  font-size: 1.5rem;
   color: var(--text-main);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  margin: 0;
+}
+.header-title span { color: var(--accent); }
+
+.toolbar-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .export-btn {
-  margin-top: 2.5rem;
-  padding: 1rem;
-  background-color: var(--text-main);
-  color: var(--bg-color);
-  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--accent);
+  color: #000;
+  font-weight: 800;
   border-radius: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   transition: all 0.2s ease;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
-
 .export-btn:hover {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 214, 0, 0.4);
+}
+
+.glass-select {
+  padding: 0.6rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-main);
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.glass-select:focus { border-color: var(--accent); }
+.glass-select option { background: var(--panel-bg); }
+
+.workspace {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
 }
 
 .main-content {
   flex: 1;
-  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
   overflow-y: auto;
-  background-color: var(--bg-color);
 }
 
-.header-title {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  color: var(--text-main);
+.rotation-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  background: rgba(13, 40, 87, 0.4);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(8px);
+}
+
+.control-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.25em;
-  text-align: center;
+  letter-spacing: 0.1em;
   font-weight: 700;
 }
 
-.header-subtitle {
+.segmented-control {
+  display: flex;
+  background: rgba(0,0,0,0.3);
+  padding: 4px;
+  border-radius: 8px;
+  gap: 4px;
+}
+
+.segment-btn {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
   color: var(--text-muted);
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.segment-btn:hover { color: var(--text-main); }
+.segment-btn.active {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 2px 8px rgba(255, 214, 0, 0.3);
 }
 
 .export-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 2rem;
-  background-color: var(--bg-color);
+  padding: 1rem;
   border-radius: 8px;
 }
 
-@media (max-width: 1024px) {
-  .app-container {
-    flex-direction: column;
-  }
-  .sidebar {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-  }
+.right-sidebar {
+  width: 320px;
+  background: var(--panel-bg);
+  border-left: 1px solid var(--border-color);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+}
+
+.sidebar-header h2 {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+}
+
+.sidebar-header p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
