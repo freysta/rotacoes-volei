@@ -45,7 +45,7 @@ function App() {
   return (
     <div className="app-container">
       <nav className="top-toolbar">
-        <h1 className="header-title">Volley<span>Flow</span></h1>
+        <h1 className="header-title">Federada</h1>
         
         <div className="toolbar-actions">
           <div className="simulation-select-container">
